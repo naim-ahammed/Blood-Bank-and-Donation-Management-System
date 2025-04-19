@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BD Blood Bank</title>
+  <link rel="icon" href=
+  "./image/logo.png"
+          type="image/x-icon" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="./index.html">🩸 BD Blood Bank</a></div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#">Find Donor</a></li>
+      <li><a href="#">Donate</a></li>
+      <li><a href="#">Banks</a></li>
+      <li><a href="./Contact/contact.html">Emergency</a></li>
+<!--  -->
+      <li class="mobile-only">
+        <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="login">Login</button></a>
+      </li>
+      <li class="mobile-only">
+        <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="register">Register</button></a>
+      </li>
+    </ul>
+  <!--  -->
+    <div class="auth-buttons desktop-only">
+      <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="login">Login</button></a>
+      <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="register">Register</button></a>
+    </div>
+
+    <!-- <div class="auth-buttons">
+
+      <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="login">Login</button></a>
+      <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="login">Register</button></a> -->
+
+        <!-- <a href="./Login_Register_Form/index.html"><button class="login">Login</button></a> -->
+        <!-- <a href="./Login_Register_Form/index.html"><button class="register">Register</button></a> -->
+    <!-- </div> -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Save Lives Through Blood Donation</h1>
+      <p>
+        Connect with blood donors across Bangladesh. Quick, reliable, and life-saving blood donation management system.
+      </p>
+      <div class="hero-buttons">
+        <button>Find Blood</button>
+        <button class="outline">Become a Donor</button>
+      </div>
+    </div>
+    <div class="hero-image"><img src="./image/HeroImage.png" alt="Hero Image" ></div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <select id="bloodGroup">
+      <option>Select Blood Group</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      <option>O+</option>
+      <option>O-</option>
+    </select>
+    <select id="district">
+      <option>Select District</option>
+      <option>Dhaka</option>
+      <option>Chittagong</option>
+      <option>Khulna</option>
+      <option>Rajshahi</option>
+    </select>
+    <button id="searchDonors" onclick="searchDonors()">Search Donors</button>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div>10,000+<br />Registered Donors</div>
+    <div>5,000+<br />Successful Donations</div>
+    <div>100+<br />Blood Banks</div>
+    <div>64<br />Districts Covered</div>
+  </section>
+
+  <!-- Recent Requests -->
+  <section class="requests">
+    <h2>Recent Blood Requests</h2>
+    <div class="request-list">
+      <div class="request-card">
+        <h3>Emergency A+ Required</h3>
+        <p>Dhaka Medical College</p>
+        <p>Need 2 bags of A+ blood for surgery on 15 Jan 2025.</p>
+        <button>Contact</button>
+      </div>
+      <div class="request-card">
+        <h3>B- Blood Needed</h3>
+        <p>Square Hospital</p>
+        <p>Urgent B- blood needed for accident patient.</p>
+        <button>Contact</button>
+      </div>
+      <div class="request-card">
+        <h3>O+ Blood Required</h3>
+        <p>Chittagong Medical</p>
+        <p>Need O+ blood for regular transfusion.</p>
+        <button>Contact</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>🩸 BD Blood Bank</h3>
+        <p>Connecting blood donors with those in need across Bangladesh.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li>Find Donor</li>
+          <li>Blood Banks</li>
+          <li>Emergency Contacts</li>
+          <li>About Us</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📞 Emergency: 16247</p>
+        <p>📧 info@bdbloodbank.org</p>
+        <p>📍 Dhaka, Bangladesh</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <p>🌐 Facebook | Twitter | Instagram</p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 BD Blood Bank. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
