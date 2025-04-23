@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="../main/style.css" />
+
     <style>
         body{
             padding:30px;
@@ -45,10 +47,29 @@
     <script type="module" src="./homepage.js"></script>
 </head>
 <body>
+
+      <!--Start Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">🩸 BD Blood Bank</a></div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../find-donor/find-donor.html">Find Donor</a></li>
+      <li><a href="../donate/donate.html">Donate</a></li>
+      <li><a href="../banks/bank.html">Banks</a></li>
+      <li><a href="../Contact/contact.html">Emergency</a></li>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+  <!--End Navbar -->
+
     <h1>Welcome to the Homepage</h1>
     <div>First Name: <span id="loggedUserFName"></span></div>
     <div>Last Name: <span id="loggedUserLName"></span></div>
     <div>Email: <span id="loggedUserEmail"></span></div>
     <button id="logout">Logout</button>
+
+
+    <script src="../main/script.js"></script>
 </body>
 </html>

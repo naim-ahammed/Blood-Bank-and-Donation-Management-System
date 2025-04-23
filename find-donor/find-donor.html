@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Donor | BD Blood Bank</title>
+  <link rel="icon" href="./image/logo.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="../main/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo"><a href="../index.html">🩸 BD Blood Bank</a></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="./find-donor.html">Find Donor</a></li>
+    <li><a href="../donate/donate.html">Donate</a></li>
+    <li><a href="../banks/bank.html">Banks</a></li>
+    <li><a href="../Contact/contact.html">Emergency</a></li>
+  </ul>
+  <div class="auth-buttons desktop-only">
+    <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="login">Login</button></a>
+    <a href="./SignUP-SignIn-Form-with-connection-to-FIrebase-main/index.html"><button class="register">Register</button></a>
+  </div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- Find Donor Section -->
+<section class="find-donor-section">
+  <div class="container">
+    <h2>Find a Blood Donor</h2>
+    <p>Search our database of donors by blood group and location.</p>
+    <div class="search-form">
+      <select id="bloodGroup">
+        <option value="">Select Blood Group</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>O+</option>
+        <option>O-</option>
+      </select>
+      <select id="district">
+        <option value="">Select District</option>
+        <option>Dhaka</option>
+        <option>Chittagong</option>
+        <option>Khulna</option>
+        <option>Rajshahi</option>
+        <!-- Add all districts as needed -->
+      </select>
+      <button onclick="searchDonors()">Search</button>
+    </div>
+
+    <!-- Results Section -->
+    <div id="donorResults" class="donor-results"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>🩸 BD Blood Bank</h3>
+      <p>Connecting blood donors with those in need across Bangladesh.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li>Find Donor</li>
+        <li>Blood Banks</li>
+        <li>Emergency Contacts</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📞 Emergency: 16247</p>
+      <p>📧 info@bdbloodbank.org</p>
+      <p>📍 Dhaka, Bangladesh</p>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <p>🌐 Facebook | Twitter | Instagram</p>
+    </div>
+  </div>
+  <p class="copyright">© 2025 BD Blood Bank. All rights reserved.</p>
+</footer>
+
+
+
+
+
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyC0U2s2wzn8NJ2Rfu_uc9L-yN6Ee2FRwXU",
+    authDomain: "login-register-form-bbdms.firebaseapp.com",
+    databaseURL: "https://login-register-form-bbdms-default-rtdb.firebaseio.com",
+    projectId: "login-register-form-bbdms",
+    storageBucket: "login-register-form-bbdms.appspot.com",
+    messagingSenderId: "711613612196",
+    appId: "1:711613612196:web:a8f308e46a845ae4dc6631"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+
+  window.searchDonors = function () {
+    const bloodGroup = document.getElementById("bloodGroup").value;
+    const district = document.getElementById("district").value;
+    const donorResults = document.getElementById("donorResults");
+
+    donorResults.innerHTML = "<p>Searching...</p>";
+
+    const dbRef = ref(db);
+    get(child(dbRef, "BloodDonors")).then((snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        const results = Object.values(data).filter(donor =>
+          (bloodGroup === "" || donor.bloodGroup === bloodGroup) &&
+          (district === "" || donor.district === district)
+        );
+
+        if (results.length > 0) {
+          donorResults.innerHTML = results.map(donor => `
+            <div class="donor-card">
+              <h3>${donor.name}</h3>
+              <p><strong>Blood Group:</strong> ${donor.bloodGroup}</p>
+              <p><strong>District:</strong> ${donor.district}</p>
+              <p><strong>Phone:</strong> ${donor.phone}</p>
+              <p><strong>Email:</strong> ${donor.email}</p>
+              ${donor.notes ? `<p><em>Note:</em> ${donor.notes}</p>` : ""}
+            </div>
+          `).join("");
+        } else {
+          donorResults.innerHTML = "<p>No matching donors found.</p>";
+        }
+
+      } else {
+        donorResults.innerHTML = "<p>No donors found in database.</p>";
+      }
+    }).catch((error) => {
+      donorResults.innerHTML = "<p>Error retrieving donors.</p>";
+      console.error(error);
+    });
+  };
+</script>
+
+
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>

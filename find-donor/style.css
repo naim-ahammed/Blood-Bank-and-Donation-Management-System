@@ -1,0 +1,200 @@
+/* ========== Global Styles ========== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  /* ========== Navbar Section ========== */
+  .navbar {
+    background: white;
+    color: #222;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .logo a {
+    color: #222;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+  }
+  
+
+
+
+
+/* ========== find-donor-section ========== */
+.find-donor-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  .find-donor-section .container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .search-form {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .search-form select,
+  .search-form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+  }
+  
+  .search-form button {
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .search-form button:hover {
+    background-color: #c72d38;
+  }
+  
+  .donor-results {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .donor-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  
+
+
+
+
+
+/* ========== Footer Section ========== */
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-content div {
+    margin-bottom: 1rem;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin: 5px 0;
+  }
+  
+  .footer p {
+    margin: 0.3rem 0;
+  }
+  
+  .footer h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* ========== Responsive Styles (Mobile) ========== */
+@media only screen and (max-width: 600px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: rgb(240, 240, 240);
+      flex-direction: column;
+      display: none;
+      text-align: center;
+      gap: 5px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .auth-buttons.desktop-only {
+      display: none;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  
+    .mobile-only {
+      display: block;
+    }
+  
+    .hero-image img {
+      height: 100px;
+    }
+  }
+   
+  /* ========== Hide Mobile-only on Desktop ========== */
+  @media (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }

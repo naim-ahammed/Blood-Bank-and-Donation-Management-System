@@ -1,0 +1,529 @@
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    background: white;
+    color: #222;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .logo a {
+    color: #222;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login {
+
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0f172a;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .register {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0f172a;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .auth-buttons button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0f172a;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    background: #ffffff;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-buttons button {
+    padding: 0.6rem 1.2rem;
+    margin-right: 1rem;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .hero-buttons .outline {
+    background: transparent;
+    color: #0f172a;
+    border: 2px solid #0f172a;
+  }
+  
+  .hero-image {
+    width: 40%;
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .hero-image img{
+    height: 400px;
+  } 
+  
+  .search-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f1f5f9;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background: white;
+    font-weight: bold;
+  }
+  
+  .requests {
+    padding: 2rem;
+    background: #f8fafc;
+  }
+  
+  .request-list {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .request-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  
+  .footer {
+    background: #0f172a;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-content div {
+    margin-bottom: 1rem;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin: 5px 0;
+  }
+  
+  .footer p {
+    margin: 0.3rem 0;
+  }
+  
+  .footer h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  #searchDonors{
+    padding: 0.6rem 1.2rem;
+    margin-right: 1rem;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: rgb(240, 240, 240);
+      flex-direction: column;
+      display: none;
+      text-align: center;
+      gap: 5px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .auth-buttons.desktop-only {
+      display: none;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  
+    .mobile-only {
+      display: block;
+    }
+
+    .hero-image img{
+        height:100px;
+      } 
+  }
+
+  @media (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
+   */
+
+
+
+   /* ========== Global Styles ========== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ========== Navbar Section ========== */
+.navbar {
+  background: white;
+  color: #222;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo a {
+  color: #222;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-icon {
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+/* Auth buttons inside navbar */
+.auth-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login,
+.register {
+  background: #0f172a;
+  color: white;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* ========== Hero Section ========== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: #ffffff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-buttons button {
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.hero-buttons button a{
+  text-decoration: none;
+}
+
+.outline-fb{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.hero-buttons .outline {
+  background: transparent;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+    text-decoration: none;
+}
+
+.outline-d{
+  color: black;
+}
+
+.hero-image {
+  width: 40%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.hero-image img {
+  height: 400px;
+}
+
+
+/* ========== Search Section ========== */
+.search-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: #f1f5f9;
+}
+
+#searchDonors {
+  padding: 0.6rem 1.2rem;
+  margin-right: 1rem;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* ========== Stats Section ========== */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background: white;
+  font-weight: bold;
+}
+
+
+/* ========== Requests Section ========== */
+.requests {
+  padding: 2rem;
+  background: #f8fafc;
+}
+
+.request-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.request-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ========== Footer Section ========== */
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-content div {
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+
+/* ========== Responsive Styles (Mobile) ========== */
+@media only screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgb(240, 240, 240);
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .auth-buttons.desktop-only {
+    display: none;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .hero-image img {
+    height: 100px;
+  }
+}
+
+
+/* ========== Hide Mobile-only on Desktop ========== */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}

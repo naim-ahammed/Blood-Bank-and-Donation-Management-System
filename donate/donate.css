@@ -1,0 +1,68 @@
+/* Donate Form Section */
+.donate-form-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .donate-form-section .container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donate-form-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #e63946;
+    margin-bottom: 10px;
+  }
+  
+  .donate-form-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  #donorForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  #donorForm input,
+  #donorForm select,
+  #donorForm textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+  }
+  
+  #donorForm input:focus,
+  #donorForm select:focus,
+  #donorForm textarea:focus {
+    border-color: #e63946;
+    outline: none;
+  }
+  
+  #donorForm button {
+    padding: 14px;
+    background-color: #e63946;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #donorForm button:hover {
+    background-color: #d62828;
+  }
+  
