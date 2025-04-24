@@ -5,10 +5,11 @@
 
 # 🔄 Folder Restructure Example:
 
+```
 BD-Blood-Bank/
 │
 ├── index.html
-├── favicon.ico  <-- Optional, can move here from ./image/logo.png
+├── favicon.ico  <-- Optional, can move here from ./assets/images/logo.png
 │
 ├── 📁 assets/
 │   ├── 📁 images/
@@ -40,3 +41,4 @@ BD-Blood-Bank/
 │   └── leaflet-config.js (optional separation of leaflet logic)
 │
 └── README.md
+```
